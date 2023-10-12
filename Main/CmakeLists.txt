@@ -1,0 +1,6 @@
+project(wxOne)
+
+add_executable(${PROJECT_NAME} src/main.cpp include/main.h)
+target_include_directories(${PROJECT_NAME} PRIVATE ./src PUBLIC ./include)
+target_link_libraries(${PROJECT_NAME} PUBLIC Packages)
+set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE TRUE)
